@@ -1,0 +1,29 @@
+{
+    "name": "armincms/zarinpal",
+    "description": "An Armincms paymnet gateway.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": { 
+        "shetabit/payment": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Armincms\\Zarinpal\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Armincms\\Zarinpal\\ZarinpalServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
