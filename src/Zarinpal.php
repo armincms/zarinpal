@@ -3,7 +3,7 @@
 namespace Armincms\Zarinpal;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\{Text, Boolean};
+use Laravel\Nova\Fields\{Text, Select};
 use Armincms\Arminpay\Contracts\{Gateway, Billing}; 
 use Shetabit\Payment\Facade\Payment;
 use Shetabit\Multipay\Invoice;
