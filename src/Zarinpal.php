@@ -69,7 +69,6 @@ class Zarinpal implements Gateway
         return Payment::amount(currency($billing->amount(), $billing->currency(), 'IRT', false))
                     ->via('zarinpal')
                     ->config($this->getConfigurations())
-                    ->transactionId($billing->getIdentifier())
                     ->verify()
                     ->getReferenceId();
     } 
