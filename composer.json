@@ -6,7 +6,8 @@
         "nova"
     ],
     "license": "MIT",
-    "require": { 
+    "require": {
+        "php": ">=7.1.0",
         "shetabit/payment": "^4.0"
     },
     "autoload": {
