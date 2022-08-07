@@ -40,6 +40,7 @@ class Zarinpal implements Gateway
     public function pay(Request $request, Billing $billing)
     {
         return (string) Payment::via('zarinpal')
+                        ->transactionId($billing->getIdentifier())
                         ->config(array_merge($this->getConfigurations(), [
                             'callbackUrl' => $billing->callback(),
                         ]))
@@ -71,7 +72,7 @@ class Zarinpal implements Gateway
         return Payment::amount(intval($billing->amount()))
                     ->via('zarinpal')
                     ->config($this->getConfigurations())
-                    ->transactionId($billing->getIdentifier())
+                    // ->transactionId($billing->getIdentifier())
                     ->verify()
                     ->getReferenceId();
     }
